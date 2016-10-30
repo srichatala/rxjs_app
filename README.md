@@ -4,8 +4,11 @@ Boilerplate for building RxJS applications in a Webpack environment
 
 ### Version
 1.0.0
+[![Build Status](https://img.shields.io/travis/srichatala/rxjs_app.svg?style=flat)](https://travis-ci.org/srichatala/rxjs_app)
+
 
 This uses RxJS version 5 - [https://github.com/ReactiveX/rxjs](https://github.com/ReactiveX/rxjs)
+
 
 ### Usage
 
