@@ -46,9 +46,13 @@
 
 	'use strict';
 
-	var _fromEvents = __webpack_require__(346);
+	var _formEvents = __webpack_require__(347);
 
-	var _fromEvents2 = _interopRequireDefault(_fromEvents);
+	var _formEvents2 = _interopRequireDefault(_formEvents);
+
+	var _arrays = __webpack_require__(348);
+
+	var _arrays2 = _interopRequireDefault(_arrays);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19739,7 +19743,8 @@
 	//# sourceMappingURL=AnimationFrameScheduler.js.map
 
 /***/ },
-/* 346 */
+/* 346 */,
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19786,6 +19791,55 @@
 	}, function (err) {
 	    console.log(err);
 	}, function () {
+	    console.log('Completed');
+	});
+
+/***/ },
+/* 348 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Rx = __webpack_require__(3);
+
+	var _Rx2 = _interopRequireDefault(_Rx);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var list = [1, 2, 3, 4, 5];
+
+	var list$ = _Rx2.default.Observable.from(list);
+
+	list$.subscribe(function (item) {
+	    console.log(item);
+	}, function (err) {
+	    console.log(err);
+	}, function (complete) {
+	    console.log('Completed');
+	});
+
+	var posts = [{ title: "Post header", body: " this header post" }, { title: "Post body", body: " this body post" }, { title: "Post footer", body: " this footer post" }];
+
+	var posts$ = _Rx2.default.Observable.from(posts);
+	var output = (0, _jquery2.default)('#posts');
+	posts$.subscribe(function (item) {
+	    output.append('<li><h1>' + item.title + '</h1><p>' + item.body + '</p></li>');
+	}, function (err) {
+	    console.log(err);
+	}, function (complete) {
+	    console.log('Completed');
+	});
+	var map = new Map([[1, 2], [3, 4], [5, 6]]);
+	var map$ = _Rx2.default.Observable.from(map);
+	map$.subscribe(function (item) {
+	    console.log(item);
+	}, function (err) {
+	    console.log(err);
+	}, function (complete) {
 	    console.log('Completed');
 	});
 

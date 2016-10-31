@@ -1,1 +1,2 @@
-import formEvent from './observable/fromEvents.js'
+import formEvent from './observable/formEvents.js'
+import arrays from './observable/arrays.js'
